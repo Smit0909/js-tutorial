@@ -4,16 +4,28 @@
 // code readability should be high
 
 /* datatypes:
-number => 2 to the power 53
-bigint
-string =>""
-boolean => true/false
+Primitive:
+Number => 2 to the power 53
+bigInt
+String =>""
+Boolean => true/false
 null => standalone value
 undefined => value not defined;
-symbol => unique
+Symbol => unique
 
-object
+Non-Primitive(Reference)
+Objects
+Arrays
+Functions
 
 */
 
+//js is dynamically typed language => that means no need to specify the datatype of variable at declaration.
+
 console.log(typeof null); //object => mostImp
+
+const id = Symbol('123');
+const anotherId = Symbol('123');
+
+console.log(id == anotherId);
+
