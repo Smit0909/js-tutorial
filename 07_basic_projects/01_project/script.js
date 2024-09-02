@@ -6,3 +6,4 @@ buttons.forEach(button => {
         body.style.backgroundColor = button.getAttribute('id');
     })
 });
+
