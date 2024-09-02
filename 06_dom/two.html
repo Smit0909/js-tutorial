@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white">
+    
+</body>
+<script>
+    let div = document.createElement('div');
+    div.setAttribute('class', 'dynamicChild');
+    div.setAttribute('id', 'firstid');
+    div.style.backgroundColor = "grey";
+    // div.innerText = "Hello Smit";
+    const textNode = document.createTextNode('Hello Smit');
+    div.appendChild(textNode);
+
+    document.body.appendChild(div); 
+    console.log(div);
+</script>
+</html>
