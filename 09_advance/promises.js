@@ -57,13 +57,43 @@ const promiseFive = new Promise(function (resolve, reject) {
     let error = true;
     if (!error) {
       resolve({ username: "user@123", password: "1234323" });
-    }
-    else{
-        reject('error: something went wrong');
+    } else {
+      reject("error: something went wrong");
     }
   }, 1000);
 });
 
-// async function consumePromiseFive(){
+async function consumePromiseFive() {
+  try {
+    const response = await promiseFive;
+  } catch (error) {
+    console.log(error);
+  }
+}
 
-// }
+consumePromiseFive();
+
+async function getAllUser(){
+    try{
+        const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await response.json();
+    console.log(data);
+    }
+    catch(error){
+        console.log(error);
+    }
+
+}
+
+// getAllUser();
+
+fetch('https://api.github.com/users/hiteshchoudhary')
+.then((response)=>{
+    return response.json()
+})
+.then((data)=>{
+    console.log(data);
+})
+.catch((error)=>console.log(error));
+
+// read about promise.all
