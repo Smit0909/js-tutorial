@@ -9,11 +9,11 @@ class User {
 
     static createId(){
         return `123`
-    }
+    } //static keyword stops from access of all objects this is made by this class
 }
 
-const hitesh = new User("smit")
-// console.log(hitesh.createId())
+const smit = new User("smit")
+// console.log(smit.createId())
 
 class Teacher extends User {
     constructor(username, email){
